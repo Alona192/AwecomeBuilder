@@ -1,4 +1,5 @@
-.build-item {
+.build-item,
+.build-float {
     fill: #00ff09;
     stroke: #0f0;
     stroke-width: 4px;
@@ -34,3 +35,44 @@
         text-align: center;
     }
 }
+
+/*.btn {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    &.btn-primary {
+        background-color: chocolate;
+        color: #fff;
+    }
+
+    &.btn-secondary {
+        background-color: chartreuse;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}*/
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #000000;
+    color: #A9A5A5;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: #ffae4a;
+        color: #000;
+    }
+
+}
+
+
+
