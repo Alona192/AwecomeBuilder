@@ -1,0 +1,98 @@
+.page-floor-item {
+    padding-top: 50px;
+
+    .flat-info {
+        list-style: none;
+
+        .flat-info-item {
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.floor-plan {
+    fill: none;
+}
+
+.flat {
+    &.active {
+        .flat-border {
+            fill: $primary-fill;
+            fill-opacity: 0.7;
+            stroke: $primary-stroke;
+        }
+    }
+
+    &.action {
+        .flat-number-overlay {
+            fill: $flat-action;
+        }
+    }
+
+    &.booking {
+        .flat-number-overlay {
+            fill: $flat-booking;
+        }
+    }
+
+    &.sold {
+        .flat-number-overlay {
+            fill: $flat-sold;
+        }
+    }
+}
+
+.flat-border {
+    stroke: $primary-stroke;
+    stroke-width: 3px;
+    fill: #04ff0000;
+    cursor: pointer;
+
+    &:hover {
+        fill: $primary-fill;
+        fill-opacity: 0.3;
+        stroke: $primary-stroke;
+    }
+}
+
+.flat-status-overlay {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.flat-number-overlay {
+    fill: $flat-free;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.flat-number-text {
+    fill: #000;
+    font-weight: 600;
+}
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+    h2 {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
+
+.floor-options {
+    display: flex;
+    gap: 16px;
+    text-align: center;
+
+    .floor-option-item {
+        border-radius: 4px;
+        background-color: #5353532f;
+        padding: 10px;
+    }
+}

@@ -1,17 +1,14 @@
-.modal {
+.modal-wrapper,
+.modal-room {
     position: fixed;
     inset: 0;
-    background: #000000b8;
+    display: none;
     align-items: center;
     justify-content: center;
-    display: none;
+    backdrop-filter: blur(5px);
 
-    &.show {
-        display: flex;
-    }
-
-    .modal-body {
-        width: 500px;
+    .modal-container {
+        width: 600px;
         min-height: 400px;
         border: 1px solid #9e9898;
         background-color: #252525;
@@ -22,52 +19,36 @@
         justify-content: space-between;
         gap: 30px;
         position: relative;
-
     }
+
+    .closed {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &.show {
+        display: flex;
+    }
+
     .modal-title {
         text-transform: uppercase;
-        margin-bottom: 22px;
     }
 
     .modal-img {
-        max-width: 100%;
-        max-height: 250px;
-        margin: 12px auto; 
+        max-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
     }
 
-    .btn-close {
-            position: absolute;
-            right: 8px;
-            top: 8px;
-            background-color: transparent;
-            padding: 3px 9px;
-            color: #fff;
-            font-size: 28px;
-            line-height: 1;
-            border: none;
-            transition: .3s;
-    
-            &:hover {
-                top: 6px;
-                transform: rotate(180deg);
-            }
-    }
-    
-    .modal-description {
-        margin-bottom: 8px;
-    }
-    
-    .btn-row {
-        display: flex;
-        gap: 12px;
-        
-    }
-    
-    form {  
+    form {
         .input-row {
             display: flex;
             flex-direction: column;
-            padding: 0 0 70px;
 
             label {
                 margin-bottom: 10px;
@@ -76,21 +57,20 @@
             input {
                 align-self: start;
                 padding: 5px 20px;
-                color: #A9A5A5;
+                color: $primary-color;
 
                 &:not(:last-child) {
                     margin-bottom: 20px;
                 }
             }
-
-            
-        }
-
-        .btn-row {
-            padding-bottom: 10px;
         }
     }
+
 }
 
-
-
+.modal-room {
+    .modal-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}

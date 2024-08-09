@@ -1,6 +1,5 @@
 header {
-	padding: 20px 0;
-	color: #A9A5A5;
+	padding: 5px 0;
 
 	.container {
 		display: flex;
@@ -23,20 +22,17 @@ header {
 	.menu {
 		list-style: none;
 		display: flex;
-		gap: 24px;
-		font-size: 18px;
-        font-weight: 500;
+		gap: 30px;
 
-		a {
+		.menu-link {
 			text-decoration: none;
-			color: #A9A5A5;
+			color: $primary-color;
 			text-transform: capitalize;
-			
+			transition: .3s;
 
 			&:hover {
-				color: #ffae4a;
+				color: $hover-link;
 			}
 		}
 	}
-	
 }

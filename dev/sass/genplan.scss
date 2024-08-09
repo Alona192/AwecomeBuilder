@@ -1,78 +1,51 @@
 .build-item,
 .build-float {
-    fill: #00ff09;
-    stroke: #0f0;
-    stroke-width: 4px;
+    fill: $hover-link;
     fill-opacity: 0;
+    stroke: $primary-stroke;
     stroke-opacity: 0;
-    cursor: pointer;
+    stroke-width: 4px;
     transition: .3s;
+    cursor: pointer;
+
     &:hover {
         fill-opacity: 0.3;
         stroke-opacity: 1;
     }
+
     &.sold {
-        fill-opacity: 0.4;
-        stroke-opacity: 0.7;
-        fill: #ff2d2d;
-        stroke: #ff2d2d;
+        fill: $sold-fill;
+        fill-opacity: 0.3;
+        stroke: $sold-fill;
+        stroke-opacity: 1;
         cursor: no-drop;
     }
 }
 
-.information {
-    color: #fff;
-    background: #121212;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+// info section
 
-    &-list {
-        list-style: none;
+.info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    .info-build {
         display: flex;
-        gap: 18px;
-        text-align: center;
+        justify-content: center;
+        list-style: none;
+        gap: 30px;
+
+        .info-item {
+            text-align: center;
+
+            i {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
     }
 }
-
-/*.btn {
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    &.btn-primary {
-        background-color: chocolate;
-        color: #fff;
-    }
-
-    &.btn-secondary {
-        background-color: chartreuse;
-    }
-
-    &:hover {
-        opacity: .8;
-    }
-}*/
-
-.btn {
-    display: inline-block;
-    padding: 10px 15px 12px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    background-color: #000000;
-    color: #A9A5A5;
-    font-size: 16px;
-    font-family: monospace;
-    cursor: pointer;
-    transition: .3s;
-
-    &:hover {
-        background-color: #ffae4a;
-        color: #000;
-    }
-
-}
-
-
-
